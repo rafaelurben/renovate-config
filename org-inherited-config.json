@@ -16,15 +16,15 @@
   },
   "packageRules": [
     {
-      "description": "Don't automerge Python and Django major and minor updates",
+      "description": ["Don't automerge Python and Django major and minor updates"],
       "matchPackageNames": ["django", "python"],
       "matchUpdateTypes": ["major", "minor"],
       "automerge": false,
-      "reviewers": ["team:foo"]
+      "reviewers": ["rafaelurben"]
     },
     {
-      "description": "Add reviewers for breaking changes",
-      "matchJsonata": ["isBreaking == true"],
+      "description": ["Add reviewers for breaking changes"],
+      "matchJsonata": ["isBreaking = true"],
       "reviewers": ["rafaelurben"]
     }
   ]
