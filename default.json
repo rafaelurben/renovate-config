@@ -26,6 +26,11 @@
       "description": ["Add reviewers for breaking changes"],
       "matchJsonata": ["isBreaking = true"],
       "reviewers": ["rafaelurben"]
+    },
+    {
+      "description": ["Don't wait for own packages"],
+      "matchPackageNames": ["django-kmuhelper", "django-teamized", "django-account"],
+      "minimumReleaseAge": "0 days",
     }
   ]
 }
