@@ -33,5 +33,5 @@
       "minimumReleaseAge": "0 days",
     }
   ],
-  "labels": ["dependencies", "dependencies/renovate"],
+  "labels": ["dependencies", "dependencies/renovate"]
 }
