@@ -32,5 +32,6 @@
       "matchPackageNames": ["django-kmuhelper", "django-teamized", "django-account"],
       "minimumReleaseAge": "0 days",
     }
-  ]
+  ],
+  "labels": ["dependencies", "dependencies/renovate"],
 }
