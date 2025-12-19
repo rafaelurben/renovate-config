@@ -1,0 +1,22 @@
+{
+  "allowedCommands": [
+    "^git add --all$",
+    "^git reset$",
+    "^pwd$"
+  ],
+  "autodiscover": true,
+  "ignorePrAuthor": true,
+  "inheritConfig": true,
+  "inheritConfigFileName": "default.json",
+  "inheritConfigRepoName": "rafaelurben/renovate-config",
+  "inheritConfigStrict": true,
+  "onboardingConfig": {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "local>rafaelurben/renovate-config"
+    ]
+  },
+  "platform": "github",
+  "platformCommit": "enabled",
+  "requireConfig": "required"
+}
