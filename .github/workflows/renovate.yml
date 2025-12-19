@@ -14,6 +14,13 @@ on:
         description: 'The repository to run on'
         required: false
         type: string
+      logLevel:
+        description: 'The renovate log level'
+        required: false
+        type: choice
+        options:
+          - debug
+          - info
   workflow_call:
 
 permissions:
@@ -46,3 +53,4 @@ jobs:
         env:
           RENOVATE_DRY_RUN: ${{ inputs.dryRun && 'full' || null }}
           RENOVATE_REPOSITORIES: ${{ inputs.repository && format('["{0}"]', inputs.repository) || null }}
+          LOG_LEVEL: ${{ inputs.logLevel && inputs.logLevel || 'info' }}
