@@ -31,7 +31,7 @@
     {
       "description": ["Don't wait for own packages"],
       "matchPackageNames": ["django-kmuhelper", "django-teamized", "django-account"],
-      "minimumReleaseAge": "0 days",
+      "minimumReleaseAge": "0 days"
     }
   ],
   "labels": ["dependencies", "dependencies/renovate"]
