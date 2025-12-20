@@ -5,7 +5,7 @@ This repository defines an org-level (user-level) default [renovate bot](https:/
 Files:
 
 - `default.json`: Defines the global preset config. Automatically used when this repository is used as a preset.
-- `org-inherited-config.json`: All renovate configs in this user/org [automatically inherit](https://docs.renovatebot.com/mend-hosted/hosted-apps-config/#inherited-config) from this.
+- `org-inherited-config.json`: All renovate configs in this user/org [automatically inherit](https://docs.renovatebot.com/mend-hosted/hosted-apps-config/#inherited-config) from this when run via Mend-hosted renovate.
 - `renovate.json`: Renovate config for this repository.
 
 
@@ -14,4 +14,5 @@ Files:
 - https://docs.renovatebot.com/getting-started/running/
 - https://docs.renovatebot.com/self-hosted-configuration/
 - https://docs.renovatebot.com/modules/platform/github/#running-as-a-github-app
+- https://docs.renovatebot.com/examples/self-hosting/
 - https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
