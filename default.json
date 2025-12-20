@@ -34,5 +34,7 @@
       "minimumReleaseAge": "0 days"
     }
   ],
-  "labels": ["dependencies", "dependencies/renovate"]
+  "labels": ["dependencies", "dependencies/renovate"],
+  "dependencyDashboardLabels": ["dependencies", "dependencies/renovate"],
+  "dependencyDashboardOSVVulnerabilitySummary": "all"
 }
