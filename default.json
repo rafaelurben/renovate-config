@@ -30,8 +30,14 @@
     },
     {
       "description": ["Don't wait for own packages"],
-      "matchPackageNames": ["django-kmuhelper", "django-teamized", "django-account"],
+      "matchPackageNames": ["django-kmuhelper", "django-teamized", "django-discordbot"],
       "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": ["Automerge uv patch versions"],
+      "matchPackageNames": "astral-sh/uv",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
     }
   ],
   "labels": ["dependencies", "dependencies/renovate"],
