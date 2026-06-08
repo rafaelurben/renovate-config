@@ -58,5 +58,16 @@
   "labels": ["dependencies", "dependencies/renovate"],
   "dependencyDashboardLabels": ["dependencies", "dependencies/renovate"],
   "dependencyDashboardOSVVulnerabilitySummary": "all",
-  "schedule": "* * * * 0,6"
+  "schedule": "* * * * 0,6",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.*\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "(?<varName>[A-Z0-9_]+):\\s*(?<currentValue>[^\\s]+)\\s*# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+) packageName=(?<packageName>[^\\s]+)"
+      ]
+    }
+  ]
 }
