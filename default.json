@@ -37,7 +37,9 @@
       "description": ["Automerge uv patch versions"],
       "matchPackageNames": "astral-sh/uv",
       "matchUpdateTypes": ["patch"],
-      "automerge": true
+      "automerge": true,
+      "groupName": "all non-breaking dependencies",
+      "groupSlug": "all-non-breaking"
     },
     {
       "description": "Group all non-breaking dependencies except python and django",
