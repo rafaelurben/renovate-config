@@ -75,7 +75,6 @@
         "isBreaking = false"
       ],
       "matchPackageNames": [
-        "*",
         "!python",
         "!django"
       ],
