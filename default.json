@@ -17,26 +17,52 @@
   },
   "packageRules": [
     {
-      "description": ["Don't automerge Python and Django major and minor updates"],
-      "matchPackageNames": ["django", "python"],
-      "matchUpdateTypes": ["major", "minor"],
+      "description": [
+        "Don't automerge Python and Django major and minor updates"
+      ],
+      "matchPackageNames": [
+        "django",
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
       "automerge": false,
-      "reviewers": ["rafaelurben"]
+      "reviewers": [
+        "rafaelurben"
+      ]
     },
     {
-      "description": ["Add reviewers for breaking changes"],
-      "matchJsonata": ["isBreaking = true"],
-      "reviewers": ["rafaelurben"]
+      "description": [
+        "Add reviewers for breaking changes"
+      ],
+      "matchJsonata": [
+        "isBreaking = true"
+      ],
+      "reviewers": [
+        "rafaelurben"
+      ]
     },
     {
-      "description": ["Don't wait for own packages"],
-      "matchPackageNames": ["django-kmuhelper", "django-teamized", "django-discordbot"],
+      "description": [
+        "Don't wait for own packages"
+      ],
+      "matchPackageNames": [
+        "django-kmuhelper",
+        "django-teamized",
+        "django-discordbot"
+      ],
       "minimumReleaseAge": "0 days"
     },
     {
-      "description": ["Automerge uv patch versions"],
+      "description": [
+        "Automerge uv patch versions"
+      ],
       "matchPackageNames": "astral-sh/uv",
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true,
       "groupName": "all non-breaking dependencies",
       "groupSlug": "all-non-breaking"
@@ -45,9 +71,10 @@
       "description": "Group all non-breaking dependencies except python and django",
       "groupName": "all non-breaking dependencies",
       "groupSlug": "all-non-breaking",
-      "matchJsonata": ["isBreaking = false"],
+      "matchJsonata": [
+        "isBreaking = false"
+      ],
       "matchPackageNames": [
-        "*",
         "!python",
         "!django"
       ],
@@ -57,15 +84,23 @@
       ]
     }
   ],
-  "labels": ["dependencies", "dependencies/renovate"],
-  "dependencyDashboardLabels": ["dependencies", "dependencies/renovate"],
-  "dependencyDashboardOSVVulnerabilitySummary": "all",
+  "labels": [
+    "dependencies",
+    "dependencies/renovate"
+  ],
+  "dependencyDashboard": {
+    "labels": [
+      "dependencies",
+      "dependencies/renovate"
+    ],
+    "osvVulnerabilitySummary": "all"
+  },
   "schedule": "* * * * 0,6",
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "^.*\\.ya?ml$"
+      "managerFilePatterns": [
+        "/^.*\\.ya?ml$/"
       ],
       "matchStrings": [
         "(?<varName>[A-Z0-9_]+):\\s*(?<currentValue>[^\\s]+)\\s*# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+) packageName=(?<packageName>[^\\s]+)"
