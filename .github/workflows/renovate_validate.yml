@@ -1,0 +1,25 @@
+name: Renovate config validation
+
+on:
+  push:
+    paths:
+      - default.json
+      - .github/workflows/renovate-validate.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  RENOVATE_VERSION: 44.263 # renovate: datasource=docker depName=renovate packageName=ghcr.io/renovatebot/renovate
+
+jobs:
+  renovate-config-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Run config validator on default.json
+        run: |
+          docker run --mount type=bind,src=.,dst=/usr/src/app,ro --env LOG_LEVEL=debug ghcr.io/renovatebot/renovate:${{env.RENOVATE_VERSION}} renovate-config-validator default.json --strict
